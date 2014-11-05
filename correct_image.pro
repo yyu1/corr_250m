@@ -11,7 +11,7 @@ PRO correct_image, in_file, out_file, stdv_file, elev_file, rfdi_file, hv_file, 
 	stdv_min = 50
 	srtm_min = 1000
 
-	elev_thresh = 500
+	elev_thresh = 800
 	hv_min_low_elev = 0.02
 	hv_min_high_elev = 0.015
 
@@ -115,5 +115,13 @@ PRO correct_image, in_file, out_file, stdv_file, elev_file, rfdi_file, hv_file, 
 		zero_line, out_line, cur_elev_line, cur_stdv_line, hv_line, rfdi_line
     writeu, out_lun, out_line
   endfor
+
+  free_lun, in_ht_lun
+  free_lun, in_hv_lun
+  free_lun, in_rfdi_lun
+  free_lun, in_elev_lun
+  free_lun, in_stdv_lun
+  free_lun, out_lun
+
 
 End

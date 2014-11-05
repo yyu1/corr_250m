@@ -8,7 +8,7 @@ Pro fill_image, in_file, out_file, rfdi_file, hv_file, elev_file, in_win_size, x
 	hv_min = 0.02
 	hv_max = 0.13
 	hv_min_high_elev = 0.015
-	elev_thresh = 500
+	elev_thresh = 800
 
 	;----------------------------------
 
